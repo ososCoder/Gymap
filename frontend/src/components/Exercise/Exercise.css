@@ -1,0 +1,298 @@
+.Exercise-div {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.Exercise-info-div {
+  backdrop-filter: blur(10px);
+  border-radius: 20px 20px 0 0;
+}
+.Exercise-info-div > h2 {
+  padding: 1rem;
+  color: var(--white);
+  /*  backdrop-filter: blur(10px); */
+  /*  background-color: var(--white); */
+  text-shadow: 1px 1px 0 black;
+}
+.Exercise-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  /*  backdrop-filter: blur(10px); */
+  /* background-color: var(--white); */
+  color: var(--white);
+  /* padding: 0 1rem 0.5rem 1rem; */
+
+  text-shadow: 1px 1px 0 black;
+}
+
+.Exercise-tagsAndActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+/*MEMBER ZONE LIKES Y FAVS*/
+.Exercise-userLikeFav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+  list-style: none;
+  margin-right: 0.5rem;
+}
+
+.Exercise-userLikeFav > li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--white);
+}
+
+/*counters*/
+.Exercise-counterLikes-true {
+  width: 15px;
+  font-size: 1.2rem;
+  animation: countUp 0.4s ease-in-out;
+  overflow-y: hidden;
+}
+@keyframes countUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.Exercise-counterLikes-false {
+  width: 15px;
+  font-size: 1.2rem;
+  animation: countDown 0.4s ease-in-out;
+  overflow-y: hidden;
+}
+@keyframes countDown {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.Exercise-counterFavs-true {
+  width: 15px;
+  font-size: 1.2rem;
+  animation: countUp 0.4s ease-in-out;
+  overflow-y: hidden;
+}
+
+.Exercise-counterFavs-false {
+  width: 15px;
+  font-size: 1.2rem;
+  animation: countDown 0.4s ease-in-out;
+  overflow-y: hidden;
+}
+
+/*like and fav animations*/
+.Exercise-FiHeart-true {
+  font-size: 2rem;
+  fill: var(--orange);
+  color: rgba(255 255 255 / 0.5);
+  animation: like 0.4s ease-in-out;
+  border-radius: 50%;
+  padding: 0.25rem;
+  background-color: rgba(255 192 203 / 1);
+}
+@keyframes like {
+  0% {
+    border-radius: 50%;
+    padding: 0.05rem;
+    background-color: rgba(255 192 203 / 0.1);
+  }
+  25% {
+    border-radius: 50%;
+    padding: 0.1rem;
+    background-color: rgba(255 192 203 / 0.25);
+    transform: rotate(10deg);
+  }
+  50% {
+    border-radius: 50%;
+    padding: 0.15rem;
+    background-color: rgba(255 192 203 / 0.5);
+    transform: rotate(30deg);
+  }
+  75% {
+    border-radius: 50%;
+    padding: 0.2rem;
+    background-color: rgba(255 192 203 / 0.75);
+  }
+  100% {
+    border-radius: 50%;
+    padding: 0.25rem;
+    background-color: rgba(255 192 203 / 1);
+  }
+}
+
+.Exercise-FiHeart-false {
+  font-size: 2rem;
+  fill: var(--transparent-black);
+  color: transparent;
+  border-radius: 50%;
+  padding: 0.25rem;
+  background-color: rgba(255 255 255 / 0.5);
+  animation: dislike 0.4s ease-in-out;
+}
+@keyframes dislike {
+  0% {
+    border-radius: 50%;
+    padding: 0.05rem;
+    background-color: rgba(255 192 203 / 1);
+  }
+  25% {
+    border-radius: 50%;
+    padding: 0.1rem;
+    background-color: rgba(255 192 203 / 0.75);
+    transform: rotate(-10deg);
+  }
+  50% {
+    border-radius: 50%;
+    padding: 0.15rem;
+    background-color: rgba(255 192 203 / 0.5);
+    transform: rotate(-30deg);
+  }
+  75% {
+    border-radius: 50%;
+    padding: 0.2rem;
+    background-color: rgba(255 255 255 / 0.5);
+  }
+  100% {
+    border-radius: 50%;
+    padding: 0.25rem;
+    background-color: rgba(255 255 255 / 0.5);
+  }
+}
+
+.Exercise-FiStar-true {
+  font-size: 2rem;
+  fill: gold;
+  color: rgba(255 255 255 / 0.5);
+  animation: fav 0.4s ease-in-out;
+  border-radius: 50%;
+  padding: 0.25rem;
+  background-color: rgba(179 163 85/1);
+}
+@keyframes fav {
+  0% {
+    border-radius: 50%;
+    padding: 0.05rem;
+    background-color: rgba(179 163 85 / 0.1);
+  }
+  25% {
+    border-radius: 50%;
+    padding: 0.1rem;
+    background-color: rgba(179 163 85 / 0.25);
+    transform: rotate(10deg);
+  }
+  50% {
+    border-radius: 50%;
+    padding: 0.15rem;
+    background-color: rgba(179 163 85 / 0.5);
+
+    transform: rotate(30deg);
+  }
+  75% {
+    border-radius: 50%;
+    padding: 0.2rem;
+    background-color: rgba(179 163 85 / 0.75);
+  }
+  100% {
+    border-radius: 50%;
+    padding: 0.25rem;
+    background-color: rgba(179 163 85 / 1);
+  }
+}
+
+.Exercise-FiStar-false {
+  font-size: 2rem;
+  fill: var(--transparent-black);
+  color: transparent;
+  border-radius: 50%;
+  padding: 0.25rem;
+  background-color: rgba(255 255 255 / 0.5);
+
+  animation: disfav 0.4s ease-in-out;
+}
+@keyframes disfav {
+  0% {
+    border-radius: 50%;
+    padding: 0.05rem;
+    background-color: rgba(179 163 85 / 1);
+  }
+  25% {
+    border-radius: 50%;
+    padding: 0.1rem;
+    background-color: rgba(179 163 85 / 0.75);
+
+    transform: rotate(-10deg);
+  }
+  50% {
+    border-radius: 50%;
+    padding: 0.15rem;
+    background-color: rgba(179 163 85 / 0.5);
+
+    transform: rotate(-30deg);
+  }
+  75% {
+    border-radius: 50%;
+    padding: 0.2rem;
+    background-color: rgba(179 163 85 / 0.5);
+  }
+  100% {
+    border-radius: 50%;
+    padding: 0.25rem;
+    background-color: rgba(255 255 255 / 0.5);
+  }
+}
+
+/*ADMIN ZONE*/
+.Exercise-deleteEdit > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin-right: 0.5rem;
+}
+
+.Exercise-delete,
+.Exercise-edit {
+  font-size: 2.1rem;
+  border-radius: 50%;
+  background: rgba(255 255 255 / 0.3);
+  padding: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  .Exercise-div {
+    min-width: 300px;
+  }
+}
+@media (min-width: 1024px) {
+  .Exercise-exercise {
+    max-width: 300px;
+  }
+}

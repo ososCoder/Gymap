@@ -1,0 +1,24 @@
+.Footer-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 1rem 1.5rem;
+}
+
+.Footer-footer > p:first-child {
+  font-size: 1.2rem;
+}
+
+.Footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
